@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Ваша страничка";
+}
+
+<h2>Добро пожаловать, <strong>@HttpContext.Current.User.Identity.Name</strong></h2>
+
+@if (Request.IsAuthenticated)
+{
+
+    <h1>Это ваша персональная страница. Доступная только вам.</h1>
+
+    using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        <a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a>
+    }
+
+    <div>
+        @Html.ActionLink("Изменить данные о себе", "EditAccount", "User")
+    </div>
+}
