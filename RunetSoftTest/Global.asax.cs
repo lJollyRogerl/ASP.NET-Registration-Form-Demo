@@ -13,6 +13,8 @@ namespace RunetSoftTest
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ClientDataTypeModelValidatorProvider.ResourceClassKey = "MyLocalizatedMessages";
+            DefaultModelBinder.ResourceClassKey = "MyLocalizatedMessages";
         }
     }
 }

@@ -69,7 +69,6 @@ namespace RunetSoftTest.Models
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
 
-
         [Display(Name = "Страна")]
         public string Country { get; set; }
     }
